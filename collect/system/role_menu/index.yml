@@ -1,0 +1,25 @@
+service:
+  - key: role_menu_save_bulk
+    module: bulk_create
+    table: "role_menu"
+    params:
+      role_menu_list:
+        check:
+          template: "{{must .role_menu_list}}"
+          err_msg: "角色不能微控"
+    model_field: "[role_menu_list]"
+  - key: role_menu_delete
+    module: model_delete
+    table: "role_menu"
+    params:
+      role_id_list:
+        check:
+          template: "{{must .role_id_list}}"
+          err_msg: "角色不能为空"
+      sys_menu_id:
+        check:
+          template: "{{must .sys_menu_id}}"
+          err_msg: "菜单不能为空"
+    filter:
+      role_id__in: "[role_id_list]"
+      sys_menu_id: "[sys_menu_id]"

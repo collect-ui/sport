@@ -1,0 +1,20 @@
+service:
+  - key: save_tender
+    http: true
+    module: empty
+    handler_params:
+      - key: file2str
+        save_field: "xml_data"
+      - key: xml2json
+        value: "[xml_data]"
+        save_field: "dataList"
+      - key: to_list
+        foreach: "[dataList]"
+        children: children
+        ancestors: "tag"
+        with_id: true
+        id: id
+        pid: parent_id
+        save_field: dataList
+      - key: param2result
+        field: "[dataList]"

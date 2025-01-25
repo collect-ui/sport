@@ -1,0 +1,93 @@
+{
+  "tag": "app",
+  "children": [
+    {
+      "tag": "layout",
+      "children": [
+        {
+          "tag": "header",
+          "children": [
+            {
+              "tag": "label",
+              "style": {
+                "fontSize": "20px",
+                "fontWeight": "bold",
+                "color": "#fff",
+                "paddingRight":"20px"
+              },
+              "children": "collect"
+            },
+            {
+              "tag": "menu",
+              "theme": "dark",
+              "mode": "horizontal",
+              "changeRouter": true,
+              "rule": {
+                "key_field": "menu_code",
+                "label_field": "menu_name",
+                "icon_field": "icon",
+                "to_field": "url"
+              },
+              "style": {
+                "backgroundColor": "inherit",
+                "flex": 1
+              },
+
+              "items": "${menu_list.filter((item)=>item.in_menu!=='0')}"
+            }
+          ],
+          "style": {
+            "color": "#fff",
+            "height": 44,
+            "paddingInline": 48,
+            "lineHeight": "44px",
+            "backgroundColor": "#4096ff",
+            "padding": "0 20px",
+            "display": "flex"
+          }
+        },
+        {
+          "tag": "layout",
+          "children": [
+            {
+              "tag": "content",
+              "style": {
+                "display": "flex",
+                "flexDirection": "column",
+                "overflow": "hidden"
+              },
+
+              "children": [
+                {
+                  "tag": "router-tab"
+                },
+                {
+                  "tag": "outlet",
+                  "style": {
+                    "flex": 1,
+                    "padding": "8px",
+                    "overflow": "hidden"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "footer",
+          "children": [
+            {
+              "tag": "label",
+              "children": "footer"
+            }
+          ],
+          "style": {
+            "padding": "4px 10px",
+            "display": "flex",
+            "alignItems": "center"
+          }
+        }
+      ]
+    }
+  ]
+}

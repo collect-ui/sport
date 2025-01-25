@@ -1,0 +1,198 @@
+service:
+  - key: get_transfer_price
+    http: true
+    module: empty
+    params:
+      data_list:
+        check:
+          template: "{{must .data_list}}"
+          err_msg: data_list不能为空
+    handler_params:
+      - key: prop_arr
+        foreach: "[data_list]"
+        fields:
+          - template: "[code]"
+          - template: "[link.code]"
+        save_field: code_list
+      - key: service2field
+        service:
+          service: autodesk.doc_price_query
+          code_list: "[code_list]"
+        save_field: price_list
+      - key: update_array
+        foreach: "[data_list]"
+#        item: item
+        fields:
+          - field: link_code
+            template: "[link.code]"
+          - field: coefficient
+            template: "[link.coefficient]"
+      - key: update_array_from_array
+        name: ""
+        foreach: "[data_list]"
+        item: item
+        field: "[code]"
+        right: "[price_list]"
+        right_field: "[code]"
+        fields:
+          - field: name
+            template: "[right.name]"
+
+      - key: update_array_from_array
+        foreach: "[data_list]"
+        item: item
+        field: "[link_code]"
+        right: "[price_list]"
+        right_field: "[code]"
+        fields:
+          - field: link_name
+            template: "[right.name]"
+      - key: param2result
+        field: data_list
+#      - key: params2result
+#        fields:
+#          - from: "[code_list]"
+#            to: code_list
+#          - from: "[data_list]"
+#            to: data_list
+  - key: chat_bulk
+    module: bulk_service
+    http: true
+    params:
+      chat_list:
+        check:
+          template: "{{must .chat_list}}"
+          err_msg: 列表不能为空
+    batch:
+      loop_max: 5
+      foreach: "[chat_list]"
+      service:
+        service: "autodesk.chart"
+      append_item_param: true
+      save_field: 'result'
+  - key: chart
+    http: true
+    module: empty
+    params:
+      name:
+        check:
+          template: "{{must .name}}"
+          err_msg: 名称不能为空
+      feature:
+        check:
+          template: "{{must .feature}}"
+          err_msg: 功能不能为空
+    handler_params:
+      - key: service2field
+        service:
+          service: autodesk.start_chart
+        save_field: start
+        append_param: true
+      - key: service2field
+        loop_max: 50
+        second: 1
+        service:
+          service: autodesk.chart_status
+          chat_id: "[start.id]"
+          conversation_id: "[start.conversation_id]"
+        save_field: status
+        template: "{{eq .status.status \"completed\"}}"
+        err_msg: "{{to_json .status}}"
+
+      - key: service2field
+        service:
+          service: autodesk.message_list
+          chat_id: "[start.id]"
+          conversation_id: "[start.conversation_id]"
+        save_field: message_list
+      - key: service2field
+        service:
+          service: autodesk.get_transfer_price
+          data_list: "[message_list.content]"
+        save_field: transfer_price_list
+      - key: param2result
+        field: "[transfer_price_list]"
+#      - key: params2result
+#        fields:
+#          - from: "[start]"
+#            to: start
+#          - from: "[status]"
+#            to: status
+#          - from: "[message_list]"
+#            to: message_list
+
+
+  - key: start_chart
+    http: true
+    module: http
+    params:
+      name:
+        check:
+          template: "{{must .name}}"
+          err_msg: 名称不能为空
+      feature:
+        check:
+          template: "{{must .feature}}"
+          err_msg: 功能不能为空
+        template: "{{replace .feature `\n` ``}}"
+    http_json: start_chart.json
+    success: "{{ if  .code  }}false{{ else }}true{{ end }}"
+    result_handler:
+      - key: result2params
+        fields:
+          - from: "[data]"
+            to: "[data]"
+      - key: param2result
+        field: "[data]"
+  - key: chart_status
+    http: true
+    log: true
+    module: http
+    params:
+      chat_id:
+        check:
+          template: "{{must .chat_id}}"
+          err_msg: 聊天ID不能为空
+    http_json: chart_status.json
+#    success: "{{ if  .code  }}false{{ else }}true{{ end }}"
+    result_handler:
+      - key: result2params
+        fields:
+          - from: "[data]"
+            to: "[data]"
+      - key: param2result
+        field: "[data]"
+  - key: message_list
+    http: true
+    module: http
+    log: true
+    params:
+      chat_id:
+        check:
+          template: "{{must .chat_id}}"
+          err_msg: 聊天ID不能为空
+    http_json: message_list.json
+    success: "{{ if  .code  }}false{{ else }}true{{ end }}"
+    result_handler:
+      - key: result2params
+        fields:
+          - from: "[data]"
+            to: "[data]"
+      - key: filter_arr
+        foreach: "[data]"
+        item: item
+        if_template: "{{eq .item.type \"tool_response\" }}"
+        save_field: data_tmp
+        template: "{{must .data_tmp}}"
+        err_msg: "{{to_json .data}}"
+      - key: update_array
+        foreach: "[data_tmp]"
+        item: item
+        fields:
+          - field: content
+            template: "[item.content]"
+            type: json
+      - key: arr2obj
+        field: "[data_tmp]"
+      - key: param2result
+        field: "[data_tmp]"

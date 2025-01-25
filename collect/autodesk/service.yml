@@ -1,0 +1,27 @@
+# 项目点路由
+service:
+  - name: "价格目录树"
+    path: "price-doc-tree/index.yml"
+
+  - name: "价格"
+    path: "price_doc/index.yml"
+
+  - name: "投标"
+    path: "tender/index.yml"
+  - name: "项目"
+    path: "price-doc-project/index.yml"
+  - name: "文档"
+    path: "technical_doc/index.yml"
+
+  - name: "大模型"
+    path: "model/index.yml"
+
+  - name: "项目"
+    path: "price-doc-qing-project/index.yml"
+  - name: "清单价格库"
+    path: "price-doc-qing/index.yml"
+
+
+  - name: "清单"
+    path: "price-doc-qing-tree/index.yml"
+
