@@ -62,7 +62,12 @@
     "historyList": [],
     "lastRightServer": {},
     "playShow": false,
-    "playTitle": "回放"
+    "playTitle": "回放",
+    "historyLogList": [],
+    "last_group_id": "",
+    "tmp": -1,
+    "last_shell_id": "",
+    "tmp2": -1
 
   },
   "initAction": [
@@ -82,7 +87,7 @@
       "api": "post:/template_data/data?service=webshell.get_dir_info_by_token",
       "appendFormFields": "webshell-file-manage",
       "data": {
-        "token": "${lastRightSsh[0].token}"
+        "token": "${lastRightSsh[0]?.token}"
       },
       "adapt": {
         "fileInfoList": "${data.dir}",
@@ -122,7 +127,7 @@
       "enable": "${lastRightSsh.length>0}",
       "group": "reload-sftp-file",
       "description": "设置右键对象路径",
-      "method": "${lastRightSsh[0].setPath(current_dir)}"
+      "method": "${lastRightSsh[0]?.setPath(current_dir)}"
     },
     {
       "tag": "ajax",
@@ -148,6 +153,7 @@
     {
       "tag": "layout",
       "children": [
+
         {
           "tag": "sider",
           "width": "320px",
@@ -834,6 +840,43 @@
                       }
                     },
                     {
+                      "tag": "update-store",
+                      "enable": "${last_group_id!==''?true:false}",
+                      "value": {
+                        "tmp": "${panelList.findIndex(item=>item.id===last_group_id)}"
+                      }
+                    },
+                    {
+                      "tag": "update-store",
+                      "enable": "${tmp>=0?true:false}",
+                      "value": {
+                        "last_webshell_x": "${tmp}",
+                        "tmp2": "${panelList[tmp].children.findIndex(item=>item.id===last_shell_id)}"
+                      }
+                    },
+                    {
+                      "tag": "update-store",
+                      "enable": "${tmp<0?true:false}",
+                      "value": {
+                        "last_webshell_x": 0,
+                        "last_webshell_y": 0
+                      }
+                    },
+                    {
+                      "tag": "update-store",
+                      "enable": "${tmp2>=0?true:false}",
+                      "value": {
+                        "last_webshell_y": "${tmp2}"
+                      }
+                    },
+                    {
+                      "tag": "update-store",
+                      "enable": "${tmp2<0?true:false}",
+                      "value": {
+                        "last_webshell_y": 0
+                      }
+                    },
+                    {
                       "tag": "arr-push",
                       "description": "基于现有group新增webshell",
                       "enable": "${panelList.length>0}",
@@ -949,6 +992,7 @@
             "flexDirection": "column"
           },
           "children": [
+
             {
               "tag": "panel-group",
               "description": "外层水平分组",
@@ -958,6 +1002,14 @@
                   "tag": "listview",
                   "itemData": "${panelList}",
                   "keyField": "id",
+                  "rowClickAction": [
+                    {
+                      "tag": "update-store",
+                      "value": {
+                        "last_group_id": "${row.id}"
+                      }
+                    }
+                  ],
                   "itemAttr": {
                     "tag": "panel",
                     "id": "${row.id}",
@@ -973,12 +1025,21 @@
                           {
                             "tag": "listview",
                             "itemData": "${[...row.children]}",
+                            "rowClickAction": [
+                              {
+                                "tag": "update-store",
+                                "value": {
+                                  "last_shell_id": "${row.id}"
+                                }
+                              }
+                            ],
                             "keyField": "id",
                             "itemAttr": {
                               "tag": "panel",
                               "id": "${row.id}",
                               "minSize": 10,
                               "order": "${row.order}",
+                              "className": "${row.id==last_shell_id?'shell-group-active':''}",
                               "children": [
                                 {
                                   "tag": "tabs",
@@ -997,6 +1058,7 @@
                                         "children": [
                                           {
                                             "tag": "ssh",
+                                            "refName": "${row.token}",
                                             "token": "${row.token}"
                                           }
                                         ]
@@ -1065,12 +1127,15 @@
                                           }
                                         },
                                         {
+                                          "tag": "update-current-path"
+                                        },
+                                        {
                                           "tag": "update-form",
                                           "enable": "${lastRightSsh.length>0}",
                                           "description": "设置表单路径",
                                           "formName": "webshell-file-manage",
                                           "value": {
-                                            "path": "${lastRightSsh[0].path}"
+                                            "path": "${lastRightSsh[0]?.path}"
                                           }
                                         },
                                         {
@@ -1287,14 +1352,24 @@
                                 "children": "回放",
 
                                 "action": [
+
                                   {
                                     "tag": "update-store",
                                     "value": {
                                       "playShow": true,
                                       "playTitle": "${row.server_busi_name+'（'+row.server_ip+'） '+row?.create_time+' 至 '+row?.close_time}"
                                     }
+                                  },
+                                  {
+                                    "tag": "ajax",
+                                    "api": "post:/template_data/data?service=webshell.webshell_log_query",
+                                    "data": {
+                                      "token": "${row.token}"
+                                    },
+                                    "adapt": {
+                                      "historyLogList": "${data}"
+                                    }
                                   }
-
                                 ]
 
                               }
@@ -1329,7 +1404,7 @@
               "tag": "dialog",
               "open": "${fileManageShow}",
               "width": "60%",
-              "title": "${lastRightSsh.length>0?lastRightSsh[0].title+'-文件管理':'文件管理'}",
+              "title": "${lastRightSsh.length>0?lastRightSsh[0]?.title+'-文件管理':'文件管理'}",
               "action": [
                 {
                   "tag": "update-store",
@@ -1390,8 +1465,8 @@
                               "uploadConfig": {
                                 "api": "post:/template_data/data?service=webshell.upload_file_by_token",
                                 "data": {
-                                  "token": "${lastRightSsh[0].token}",
-                                  "path": "${lastRightSsh[0].path}"
+                                  "token": "${lastRightSsh[0]?.token}",
+                                  "path": "${lastRightSsh[0]?.path}"
                                 }
                               },
                               "children": [
@@ -1440,7 +1515,7 @@
                                   {
                                     "tag": "method",
                                     "description": "设置对象路径",
-                                    "method": "${lastRightSsh[0].setPath(current_dir)}"
+                                    "method": "${lastRightSsh[0]?.setPath(current_dir)}"
                                   },
                                   {
                                     "tag": "update-form",
@@ -1448,7 +1523,7 @@
                                     "description": "设置表单路径",
                                     "formName": "webshell-file-manage",
                                     "value": {
-                                      "path": "${lastRightSsh[0].path}"
+                                      "path": "${lastRightSsh[0]?.path}"
                                     }
                                   },
                                   {
@@ -1548,8 +1623,8 @@
                                       "lastDownloadRowName": ""
                                     },
                                     "data": {
-                                      "token": "${lastRightSsh[0].token}",
-                                      "path": "${lastRightSsh[0].path+'/'+row.name}"
+                                      "token": "${lastRightSsh[0]?.token}",
+                                      "path": "${lastRightSsh[0]?.path+'/'+row.name}"
                                     }
                                   }
                                 ]
@@ -1568,8 +1643,8 @@
                                     "tag": "ajax",
                                     "api": "post:/template_data/data?service=webshell.remove_file_by_token",
                                     "data": {
-                                      "token": "${lastRightSsh[0].token}",
-                                      "path": "${lastRightSsh[0].path+'/'+row.name}"
+                                      "token": "${lastRightSsh[0]?.token}",
+                                      "path": "${lastRightSsh[0]?.path+'/'+row.name}"
                                     }
                                   },
                                   {
@@ -1613,6 +1688,7 @@
                   },
                   "children": [
                     {
+                      "refName": "history",
                       "tag": "ssh"
                     }
                   ],
@@ -1638,7 +1714,12 @@
                                 {
                                   "tag": "button",
                                   "size": "small",
-                                  "icon": "CaretRightOutlined"
+                                  "icon": "CaretRightOutlined",
+                                  "action": [
+                                    {
+                                      "tag": "update-history"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -1690,5 +1771,34 @@
         }
       ]
     }
+  ],
+  "bottomToolBar": [
+    {
+      "tag": "form",
+      "name": "shell-form",
+      "submitOnEnter": true,
+      "action": [
+        {
+          "tag": "batch-shell"
+        }
+      ],
+      "children": [
+        {
+          "tag": "form-item",
+          "label": "批量执行",
+          "name": "shell",
+          "style": {
+            "marginBottom": "0px"
+          },
+          "children": [
+            {
+              "tag": "input",
+              "placeholder": "激活窗口批量执行"
+            }
+          ]
+        }
+      ]
+    }
+
   ]
 }

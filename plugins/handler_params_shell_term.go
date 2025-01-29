@@ -86,6 +86,15 @@ func (si *ShellTerm) HandlerData(template *config.Template, handlerParam *config
 			} else if messageData.Type == "resize" {
 
 				session.WindowChange(messageData.Rows, messageData.Cols)
+			} else if messageData.Type == "pwd" {
+				// 发送带有特殊标志符的 pwd 命令
+				_, err = pipeIn.Write([]byte("echo '<<<PWD_START>>>'; pwd; echo '<<<PWD_END>>>';\n"))
+				if err != nil {
+					log.Println("failed to write pwd command to stdin: ", err)
+					stopCh <- struct{}{}
+					break
+				}
+
 			}
 
 			if err != nil {

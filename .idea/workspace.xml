@@ -4,7 +4,44 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cc5461b-8ccc-4267-8ba8-e21d58bf20ea" name="Changes" comment="" />
+    <list default="true" id="7cc5461b-8ccc-4267-8ba8-e21d58bf20ea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/frontend/page_data/data/server/webshell.json" beforeDir="false" afterPath="$PROJECT_DIR$/collect/frontend/page_data/data/server/webshell.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/price.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/price.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/DailyMotion-5d0314fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/DailyMotion-5d0314fa.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Facebook-7e4e587b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Facebook-7e4e587b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/FilePlayer-20040273.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/FilePlayer-20040273.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Kaltura-5fe45e03.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Kaltura-5fe45e03.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mixcloud-d62116c8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mixcloud-d62116c8.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mux-49ba853c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mux-49ba853c.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Preview-6f188bf5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Preview-6f188bf5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/SoundCloud-90fd418d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/SoundCloud-90fd418d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Streamable-8a8c9553.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Streamable-8a8c9553.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Twitch-7c303a2f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Twitch-7c303a2f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vidyard-5663bedb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vidyard-5663bedb.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vimeo-0a57b306.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vimeo-0a57b306.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Wistia-499bf311.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Wistia-499bf311.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/YouTube-d416ba19.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/YouTube-d416ba19.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/index-77e56a41.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/index-77e56a41.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/collect-ui/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/data/webshell.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/data/webshell.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/handler_params_shell_term.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/handler_params_shell_term.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,7 +226,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/plugins/handler_params_shell_term.go</url>
-          <line>109</line>
+          <line>118</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">

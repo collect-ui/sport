@@ -65,3 +65,8 @@
 .sftp-folder:hover{
   background: #00000022;
 }
+.shell-group-active{
+    border: 1px solid #00BFFF;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    background-color: black;
+}
