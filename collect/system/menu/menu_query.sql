@@ -1,10 +1,31 @@
 SELECT
     code.sys_code_text as menu_type_name,
     p.menu_name as parent_menu_name,
-    a.*
+    a.sys_menu_id,
+    a.menu_type,
+    a.menu_name,
+    a.menu_code,
+    a.icon,
+    a.is_index,
+    a.router_group,
+    sm.api as group_api,
+    sm.url as group_path,
+    a.api,
+    a."data",
+    a.url,
+    a.in_menu,
+    a.is_common,
+    a.parent_id,
+    a.create_time,
+    a.create_user,
+    a.order_index,
+    a.description,
+    a.belong_project,
+    a."type"
 FROM sys_menu a
 left join sys_code code on code.sys_code_type = 'menu_type'  and a.menu_type = code.sys_code
 left join sys_menu p on a.parent_id = p.sys_menu_id
+left join sys_menu sm on a.router_group = sm.menu_code and sm.belong_project = a.belong_project
 where a.belong_project= {{.belong_project}}
 {{ if .menu_code }}
 and a.menu_code = {{.menu_code }}

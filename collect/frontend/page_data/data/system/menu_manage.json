@@ -18,11 +18,7 @@
     "last_parent_id": "",
     "col": 6,
     "role_list": [],
-    "test": [
-      {
-        "id": "1"
-      }
-    ]
+    "framework_list": []
   },
   "initAction": [
     {
@@ -36,6 +32,18 @@
       },
       "adapt": {
         "server_env_data": "${data}"
+      }
+    },
+    {
+      "tag": "ajax",
+      "description": "请求框架类型",
+      "group": "server-env-tree",
+      "api": "post:/template_data/data?service=system.menu_query",
+      "data": {
+        "menu_type": "framework"
+      },
+      "adapt": {
+        "framework_list": "${data}"
       }
     },
     {
@@ -403,6 +411,14 @@
                                         {
                                           "label": "路由",
                                           "value": "2"
+                                        },
+                                        {
+                                          "label": "框架",
+                                          "value": "framework"
+                                        },
+                                        {
+                                          "label": "无框架",
+                                          "value": "no_framework"
                                         }
                                       ]
                                     }
@@ -638,6 +654,9 @@
                               "tag": "col",
                               "span": "${col}",
                               "children": [
+
+
+
                                 {
                                   "tag": "form-item",
                                   "label": "继承框架",
@@ -645,8 +664,15 @@
                                   "extra": "是否包括框架的公共部分",
                                   "children": [
                                     {
-                                      "tag": "input",
-                                      "placeholder": "请输入继承框架路由"
+                                      "tag": "select",
+                                      "placeholder": "请选择框架",
+                                      "fieldNames": {
+                                        "label": "menu_name",
+                                        "value": "menu_code"
+                                      },
+                                      "labelRender": "${label+'['+value+']'}",
+                                      "optionRender": "${menu_name+'['+menu_code+']'}",
+                                      "options": "${framework_list}"
                                     }
                                   ]
                                 }
@@ -976,41 +1002,6 @@
                           "extra": "是否包括框架的公共部分",
                           "children": [
                             "${treeSelected.router_group}"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "tag": "form-item",
-                      "noStyle": true,
-                      "children": [
-                        {
-                          "tag": "col",
-                          "span": "${col}",
-                          "children": [
-                            {
-                              "tag": "form-item",
-                              "label": "框架服务",
-                              "extra": "有且仅仅是首页的时候要写，非首页只要继承框架即可",
-                              "name": "group_api",
-                              "children": [
-                                "${treeSelected.group_api}"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "tag": "col",
-                          "span": "${col}",
-                          "children": [
-                            {
-                              "tag": "form-item",
-                              "label": "框架路由",
-                              "name": "group_path",
-                              "children": [
-                                "${treeSelected.group_path}"
-                              ]
-                            }
                           ]
                         }
                       ]

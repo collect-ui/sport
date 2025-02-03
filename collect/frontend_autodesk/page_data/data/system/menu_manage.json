@@ -392,6 +392,14 @@
                                         {
                                           "label": "路由",
                                           "value": "2"
+                                        },
+                                        {
+                                          "label": "框架",
+                                          "value": "framework"
+                                        },
+                                        {
+                                          "label": "无框架",
+                                          "value": "no_framework"
                                         }
                                       ]
                                     }

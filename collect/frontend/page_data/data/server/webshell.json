@@ -1044,6 +1044,7 @@
                                 {
                                   "tag": "tabs",
                                   "size": "small",
+                                  "withHistory": true,
                                   "type": "editable-card",
                                   "hideAdd": true,
                                   "itemAttr": {

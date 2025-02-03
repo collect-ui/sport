@@ -5,42 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cc5461b-8ccc-4267-8ba8-e21d58bf20ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/collect/frontend/page_data/data/framework/framework_full.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto-desk.zip" beforeDir="false" afterPath="$PROJECT_DIR$/auto-desk.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/frontend/page_data/data/course/course.json" beforeDir="false" afterPath="$PROJECT_DIR$/collect/frontend/page_data/data/course/course.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collect/frontend/page_data/data/server/webshell.json" beforeDir="false" afterPath="$PROJECT_DIR$/collect/frontend/page_data/data/server/webshell.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/frontend/page_data/data/system/menu_manage.json" beforeDir="false" afterPath="$PROJECT_DIR$/collect/frontend/page_data/data/system/menu_manage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/frontend/page_data/index.yml" beforeDir="false" afterPath="$PROJECT_DIR$/collect/frontend/page_data/index.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/frontend_autodesk/page_data/data/framework/framework.json" beforeDir="false" afterPath="$PROJECT_DIR$/collect/frontend_autodesk/page_data/data/framework/framework.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/frontend_autodesk/page_data/data/system/menu_manage.json" beforeDir="false" afterPath="$PROJECT_DIR$/collect/frontend_autodesk/page_data/data/system/menu_manage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/system/menu/menu_query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/collect/system/menu/menu_query.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/price.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/price.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/DailyMotion-5d0314fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/DailyMotion-5d0314fa.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Facebook-7e4e587b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Facebook-7e4e587b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/FilePlayer-20040273.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/FilePlayer-20040273.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Kaltura-5fe45e03.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Kaltura-5fe45e03.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mixcloud-d62116c8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mixcloud-d62116c8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mux-49ba853c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mux-49ba853c.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Preview-6f188bf5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Preview-6f188bf5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/SoundCloud-90fd418d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/SoundCloud-90fd418d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Streamable-8a8c9553.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Streamable-8a8c9553.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Twitch-7c303a2f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Twitch-7c303a2f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vidyard-5663bedb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vidyard-5663bedb.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vimeo-0a57b306.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vimeo-0a57b306.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Wistia-499bf311.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Wistia-499bf311.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/YouTube-d416ba19.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/YouTube-d416ba19.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/index-77e56a41.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/index-77e56a41.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/DailyMotion-7855c328.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/DailyMotion-7855c328.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Facebook-fa372f55.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Facebook-fa372f55.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/FilePlayer-ac2037c1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/FilePlayer-ac2037c1.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Kaltura-e88626b9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Kaltura-e88626b9.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mixcloud-e614d3d5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mixcloud-e614d3d5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mux-7d6412e0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Mux-7d6412e0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Preview-5835e419.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Preview-5835e419.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/SoundCloud-60586776.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/SoundCloud-60586776.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Streamable-128c15a6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Streamable-128c15a6.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Twitch-bb5c82a8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Twitch-bb5c82a8.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vidyard-22e6995f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vidyard-22e6995f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vimeo-b6132da4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Vimeo-b6132da4.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Wistia-2d484577.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/Wistia-2d484577.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/YouTube-66295745.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/YouTube-66295745.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/index-47754379.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/collect-ui/assets/index-47754379.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/collect-ui/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/collect-ui/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/data/webshell.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/data/webshell.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/handler_params_shell_term.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/handler_params_shell_term.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,36 +80,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
-    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/go/auto-desk/model&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;go.sdk&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "configurable..is.expanded": "false",
+    "configurable.GoLibrariesConfigurable.is.expanded": "true",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "F:/go/auto-desk/collect/frontend/page_data/data/framework",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "go.sdk",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\go\auto-desk\collect\frontend\page_data\data\framework" />
       <recent name="F:\go\auto-desk\model" />
       <recent name="F:\go\auto-desk\collect\frontend\page_data\data\server" />
       <recent name="F:\go\auto-desk\collect\frontend\page_data\data\system" />
       <recent name="F:\go\auto-desk\collect\autodesk\price-doc-qing" />
-      <recent name="F:\go\auto-desk\collect\autodesk\price-doc-qing-tree" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\go\auto-desk\collect\frontend\page_data" />

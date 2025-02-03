@@ -17,6 +17,15 @@ service:
       - key: param2result
         field: data
     data_file: data/framework/framework.json
+  - key: framework_full
+    http: true
+    module: empty
+    handler_params:
+      - key: file2datajson
+        save_field: data
+      - key: param2result
+        field: data
+    data_file: data/framework/framework_full.json
   - key: home
     http: true
     module: empty

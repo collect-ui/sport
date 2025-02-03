@@ -541,7 +541,7 @@
               "enable": "${current_course.teacher_name && activeKey=='grade'}",
               "tag": "ajax",
               "group": "grade-list",
-              "description": "页面初始化请求",
+              "description": "页面初始化请求，查询训练中成绩",
               "api": "post:/template_data/data?service=sport.course_grade_query",
               "appendFormFields": "grade-user-form",
               "data": {
@@ -558,7 +558,7 @@
               "enable": "${current_course.teacher_name && activeKey=='analyst'}",
               "tag": "ajax",
               "group": "analyst-list",
-              "description": "页面初始化请求",
+              "description": "页面初始化请求，查询分析成绩",
               "api": "post:/template_data/data?service=sport.course_grade_query",
               "appendFormFields": "analyst-user-form",
               "data": {
@@ -719,7 +719,7 @@
                               "action": [
                                 {
                                   "tag": "open-url",
-                                  "url": "/collect-ui/#/training_dashboard_full",
+                                  "url": "/collect-ui/#/full/training_dashboard",
                                   "windowName": "_blank",
                                   "data": {
                                     "course_id": "${current_course.course_id}",
@@ -1001,6 +1001,7 @@
 
                                 }
                               ],
+
                               "rowData": "${gradeList}"
                             },
                             {
@@ -1325,7 +1326,7 @@
                               "action": [
                                 {
                                   "tag": "open-url",
-                                  "url": "/collect-ui/#/home_full",
+                                  "url": "/collect-ui/#/full/home",
                                   "windowName": "_blank",
                                   "data": {
                                     "course_id": "${current_course.course_id}",
