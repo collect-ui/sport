@@ -649,8 +649,6 @@
                       "pinned": "left",
                       "width": 150,
                       "suppressSizeToFit": true,
-                      "checkboxSelection": true,
-                      "headerCheckboxSelection": true,
                       "headerName": "目录编号",
                       "field": "tree_code"
                     },

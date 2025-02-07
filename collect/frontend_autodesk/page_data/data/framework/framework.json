@@ -73,7 +73,6 @@
                         {
                           "tag": "menu",
                           "mode": "inline",
-                          "theme": "dark",
                           "changeRouter": true,
                           "rule": {
                             "key_field": "menu_code",
@@ -104,7 +103,6 @@
               "children": [
                 {
                   "tag": "router-tab",
-                  "theme": "dark",
                   "className": "dark-theme-tabs"
                 },
                 {

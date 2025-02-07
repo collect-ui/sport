@@ -25,3 +25,9 @@ service:
   - name: "清单"
     path: "price-doc-qing-tree/index.yml"
 
+  - name: "投标配置"
+    path: "tb-config/index.yml"
+
+  - name: "投标项目"
+    path: "tb-project/index.yml"
+

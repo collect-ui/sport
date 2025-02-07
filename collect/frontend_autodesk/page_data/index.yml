@@ -98,3 +98,12 @@ service:
       - key: param2result
         field: data
     data_file: data/price/qing_price.json
+  - key: tb_config
+    http: true
+    module: empty
+    handler_params:
+      - key: file2datajson
+        save_field: data
+      - key: param2result
+        field: data
+    data_file: data/technical/tb_config.json

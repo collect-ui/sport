@@ -62,14 +62,17 @@
           "width": 60,
           "valueGetter": "node.rowIndex + 1",
           "sortable": false,
-          "pinned": "left"
+          "pinned": "left",
+          "suppressSizeToFit": true
         },
         {
           "pinned": "left",
           "checkboxSelection": true,
           "headerCheckboxSelection": true,
           "headerName": "账号",
-          "field": "username"
+          "field": "username",
+          "width": 220,
+          "suppressSizeToFit": true
         },
         {
           "headerName": "工号/学号",

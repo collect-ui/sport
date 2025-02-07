@@ -189,9 +189,9 @@ func main() {
 	templateService.RunScheduleService()
 	// 添加启动服务
 	templateService.RunStartupService()
-	//r.GET("/", func(c *gin.Context) {
-	//	c.Redirect(http.StatusMovedPermanently, "/ssh")
-	//})
+	r.GET("/", func(c *gin.Context) {
+		c.Redirect(http.StatusMovedPermanently, "/collect-ui")
+	})
 	r.POST("/template_data/data", func(c *gin.Context) {
 		templateService.HandlerRequest(c)
 	})
